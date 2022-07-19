@@ -3,6 +3,14 @@
 #include "test/catch.hpp"
 #include "typewise-alert.h"
 
-TEST_CASE("infers the breach according to limits") {
+TEST_CASE("infers the breach according to limits - TOO LOW") {
   REQUIRE(inferBreach(12, 20, 30) == TOO_LOW);
+}
+
+TEST_CASE("infers the breach according to limits - TOO HIGH") {
+  REQUIRE(inferBreach(32, 20, 30) == TOO_LOW);
+}
+
+TEST_CASE("infers the breach according to limits - NORMAL") {
+  REQUIRE(inferBreach(22, 20, 30) == TOO_LOW);
 }
