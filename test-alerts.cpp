@@ -20,9 +20,9 @@ TEST_CASE("classift temperate breach - PASSIVE_COOLING - TOO_HIGH") {
 }
 
 TEST_CASE("classift temperate breach - HI_ACTIVE_COOLING - TOO_HIGH") {
-  REQUIRE(classifyTemperatureBreach(HI_ACTIVE_COOLING, 41) == TOO_HIGH);
+  REQUIRE(classifyTemperatureBreach(HI_ACTIVE_COOLING, 46) == TOO_HIGH);
 }
 
 TEST_CASE("classift temperate breach - MED_ACTIVE_COOLING - TOO_HIGH") {
-  REQUIRE(classifyTemperatureBreach(MED_ACTIVE_COOLING, 46) == TOO_HIGH);
+  REQUIRE(classifyTemperatureBreach(MED_ACTIVE_COOLING, 41) == TOO_HIGH);
 }
