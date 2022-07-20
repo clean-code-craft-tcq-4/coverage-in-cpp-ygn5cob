@@ -21,7 +21,7 @@ TEST_CASE("classift temperate breach") {
 TEST_CASE("check and alert") {
   BatteryCharacter batteryChar;
   batteryChar.coolingType = PASSIVE_COOLING;
-  checkAndAlert(TO_CONTROLLER, batteryChar, 20);
-  checkAndAlert(TO_EMAIL, batteryChar, 20);
-  checkAndAlert(TO_EMAIL, batteryChar, 40);
+  REQUIRE(checkAndAlert(TO_CONTROLLER, batteryChar, 20) == true);
+  REQUIRE(checkAndAlert(TO_EMAIL, batteryChar, 20) == true);
+  REQUIRE(checkAndAlert(TO_EMAIL, batteryChar, 40) == true);
 }
