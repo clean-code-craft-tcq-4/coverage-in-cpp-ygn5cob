@@ -17,3 +17,9 @@ TEST_CASE("classift temperate breach") {
   REQUIRE(classifyTemperatureBreach(MED_ACTIVE_COOLING, 36) == NORMAL);
   REQUIRE(classifyTemperatureBreach(MED_ACTIVE_COOLING, 41) == TOO_HIGH);
 }
+
+TEST_CASE("check and alert") {
+  BatteryCharacter batteryChar;
+  batteryChar.coolingType = PASSIVE_COOLING;
+  checkAndAlert(TO_CONTROLLER, batteryChar, 20);
+}
