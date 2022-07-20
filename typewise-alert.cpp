@@ -57,7 +57,7 @@ bool sendToController(BreachType breachType) {
   return true;
 }
 
-void sendToEmail(BreachType breachType) {
+bool sendToEmail(BreachType breachType) {
   const char* recepient = "a.b@c.com";
   switch(breachType) {
     case TOO_LOW:
