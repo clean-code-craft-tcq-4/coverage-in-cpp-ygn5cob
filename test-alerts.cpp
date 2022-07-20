@@ -23,5 +23,6 @@ TEST_CASE("check and alert") {
   batteryChar.coolingType = PASSIVE_COOLING;
   REQUIRE(checkAndAlert(TO_CONTROLLER, batteryChar, 20) == true);
   REQUIRE(checkAndAlert(TO_EMAIL, batteryChar, -1) == true);
+  REQUIRE(checkAndAlert(TO_EMAIL, batteryChar, 20) == true);
   REQUIRE(checkAndAlert(TO_EMAIL, batteryChar, 40) == true);
 }
